@@ -1,7 +1,5 @@
-
-export default class Heap {
+class Heap {
     constructor(comparableFn) {
-
         if (!comparableFn || typeof comparableFn !== 'function') {
             throw new Error('You must provide a comparable function');
         }
@@ -64,7 +62,13 @@ export default class Heap {
     orderHeapUp() {
         let lastIndex = this.heap.length - 1;
 
-        while (this.hasParent(lastIndex) && this.hasToChangeValues(this.heap[lastIndex], this.getParent(lastIndex))) {
+        while (
+            this.hasParent(lastIndex) &&
+            this.hasToChangeValues(
+                this.heap[lastIndex],
+                this.getParent(lastIndex)
+            )
+        ) {
             this.swap(lastIndex, this.getParentIndex(lastIndex));
             lastIndex = this.getParentIndex(lastIndex);
         }
@@ -75,13 +79,25 @@ export default class Heap {
         let nextIndex = null;
 
         while (this.hasLeftChild(startIndex)) {
-            if (this.hasRightChild(startIndex) && this.hasToChangeValues(this.getRightChild(startIndex), this.getLeftChild(startIndex))) {
+            if (
+                this.hasRightChild(startIndex) &&
+                this.hasToChangeValues(
+                    this.getRightChild(startIndex),
+                    this.getLeftChild(startIndex)
+                )
+            ) {
                 nextIndex = this.getRightChildIndex(startIndex);
             } else {
                 nextIndex = this.getLeftChildIndex(startIndex);
             }
 
-            if (!this.hasToChangeValues(this.heap[nextIndex], this.heap[startIndex])) break;
+            if (
+                !this.hasToChangeValues(
+                    this.heap[nextIndex],
+                    this.heap[startIndex]
+                )
+            )
+                break;
 
             this.swap(nextIndex, startIndex);
             startIndex = nextIndex;
@@ -109,3 +125,5 @@ export default class Heap {
         return this.comparableFn(child, parent);
     }
 }
+
+export default Heap;

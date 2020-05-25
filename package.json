@@ -1,0 +1,37 @@
+{
+    "name": "js-algorithms",
+    "version": "1.0.0",
+    "description": "Algorithms developed in Javascript",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "lint": "eslint .",
+        "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
+        "start": "babel-node index.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/lcorniglione/js-algorithms.git"
+    },
+    "keywords": [
+        "Algorithms",
+        "data-structures",
+        "javascript",
+        "js"
+    ],
+    "author": "Luciano Corniglione",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/lcorniglione/js-algorithms/issues"
+    },
+    "homepage": "https://github.com/lcorniglione/js-algorithms#readme",
+    "devDependencies": {
+        "@babel/cli": "^7.8.4",
+        "@babel/core": "^7.9.6",
+        "@babel/node": "^7.8.7",
+        "@babel/preset-env": "^7.9.6",
+        "eslint": "^7.1.0",
+        "eslint-config-airbnb": "^18.1.0",
+        "eslint-plugin-prettier": "^3.1.3"
+    }
+}

@@ -1,4 +1,8 @@
-import Heap from './Heap';
+// PLAYGROUND
+
+import Heap from './src/data-structures/heaps/Heap';
+
+// HEAPS
 
 function maxHeapFn(child, parent) {
     return child >= parent;
@@ -25,8 +29,8 @@ console.log(maxHeap.toString());
 
 const maxValue = maxHeap.poll();
 
-console.log("resulted heap", maxHeap.toString());
-console.log("max value", maxValue);
+console.log('resulted heap', maxHeap.toString());
+console.log('max value', maxValue);
 
 function minHeapFn(child, parent) {
     return child <= parent;
@@ -53,5 +57,5 @@ console.log(minHeap.toString());
 
 const minValue = minHeap.poll();
 
-console.log("resulted heap", minHeap.toString());
-console.log("min value", minValue);
+console.log('resulted heap', minHeap.toString());
+console.log('min value', minValue);
