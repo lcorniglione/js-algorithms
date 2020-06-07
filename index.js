@@ -1,6 +1,7 @@
 // PLAYGROUND
 
 import Heap from './src/data-structures/heaps/Heap';
+import LinkedList from './src/data-structures/linked-list/LinkedList';
 
 // HEAPS
 
@@ -59,3 +60,19 @@ const minValue = minHeap.poll();
 
 console.log('resulted heap', minHeap.toString());
 console.log('min value', minValue);
+
+// LINKED LIST
+
+const list = new LinkedList();
+
+list.append(5);
+list.append(8);
+list.append(7);
+list.append(10);
+list.prepend(1);
+list.prepend(2);
+list.removeFirst();
+list.removeLast();
+list.insert(2, 4);
+list.printList();
+console.log(list);
